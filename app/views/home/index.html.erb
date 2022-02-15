@@ -9,6 +9,8 @@
   <% end %>
   <p>
     You have successfully authenticated with your Devise account.
+
+    <iframe src='https://www.youtube.com/embed/bvnzyXGkNY4?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
   </p>
 
   <%= link_to "Sign out", destroy_user_session_path, 'data-turbo-method': :delete  %>
@@ -18,5 +20,7 @@
   <br>
   <%= link_to "Login!", new_user_session_path %>
 
+  <%= %>>
+video
 
 <% end %>
