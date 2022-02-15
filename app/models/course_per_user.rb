@@ -10,7 +10,7 @@ class CoursePerUser < ApplicationRecord
   def create_videos
     videos = []
     self.course.videos.order(:order).each do |video|
-      video_created = VideoPerUser.create(video: video, user: user, course_per_user: self, status: :not_finished)
+      video_created = VideoPerUser.create(video: video, user: user, course_per_user: self, status: :unfinished)
       videos.append(video_created)
       videos.first.update(status: :current)
     end
