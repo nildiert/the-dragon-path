@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_02_15_033153) do
+ActiveRecord::Schema[7.0].define(version: 2022_02_15_041630) do
   create_table "course_per_users", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "course_id"
@@ -27,6 +27,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_15_033153) do
     t.integer "order"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "phone_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -56,10 +66,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_15_033153) do
 
   create_table "video_per_users", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.integer "video_id"
+    t.integer "video_id", null: false
+    t.integer "course_per_user_id", null: false
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["course_per_user_id"], name: "index_video_per_users_on_course_per_user_id"
     t.index ["user_id"], name: "index_video_per_users_on_user_id"
     t.index ["video_id"], name: "index_video_per_users_on_video_id"
   end
@@ -77,8 +89,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_15_033153) do
 
   add_foreign_key "course_per_users", "courses"
   add_foreign_key "course_per_users", "users"
+  add_foreign_key "profiles", "users"
   add_foreign_key "tasks", "projects"
   add_foreign_key "tasks", "users"
+  add_foreign_key "video_per_users", "course_per_users"
   add_foreign_key "video_per_users", "users"
   add_foreign_key "video_per_users", "videos"
   add_foreign_key "videos", "courses"

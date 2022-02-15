@@ -1,7 +1,24 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @course_per_user %>
+<%  @course_per_user.video_per_users.each do |video| %>
+  <% if video.current? %>
+    <iframe src='https://www.youtube.com/embed/<%= YoutubeID.from(video.video.url) %>?rel=0&autoplay=<%= params[:autoplay] || 1 %>' frameborder='0' allowfullscreen></iframe>
+  <% end %>
+<% end %>
+<%  @course_per_user.video_per_users.each do |video| %>
+  <ul>
+    <% if video.current? %>
+    <strong>
+      <li><%= video.video.title %></li>
+    </strong>
+    <% else %>
+      <li><%= video.video.title %></li>
+    <% end %>
+  </ul>
+<% end %>
 
+
+<%#= YoutubeID.from("http://www.youtube.com/watch?v=RCUkmUXMd_k") %>
 <div>
   <%= link_to "Edit this course per user", edit_course_per_user_path(@course_per_user) %> |
   <%= link_to "Back to course per users", course_per_users_path %>

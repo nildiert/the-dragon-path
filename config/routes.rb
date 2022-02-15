@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :profiles
   resources :tasks
   resources :video_per_users
   resources :course_per_users
