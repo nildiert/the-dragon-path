@@ -4,7 +4,7 @@ class CreateVideoPerUsers < ActiveRecord::Migration[7.0]
       t.references :user, null: false, foreign_key: true
       t.references :video, null: false, foreign_key: true
       t.references :course_per_user, null: false, foreign_key: true
-      t.integer :status, default: :not_finished
+      t.integer :status, default: :unfinished
 
       t.timestamps
     end

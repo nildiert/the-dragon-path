@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="451243a4-6c18-4095-8ae8-587205b9649b" name="Changes" comment="" />
+    <list default="true" id="451243a4-6c18-4095-8ae8-587205b9649b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/app/models/course_per_user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/course_per_user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/video_per_user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/video_per_user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20220215032942_create_video_per_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20220215032942_create_video_per_users.rb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -154,7 +158,7 @@
       <workItem from="1644889774561" duration="1235000" />
       <workItem from="1644891216092" duration="11000" />
       <workItem from="1644891252918" duration="13000" />
-      <workItem from="1644891310762" duration="16895000" />
+      <workItem from="1644891310762" duration="17213000" />
     </task>
     <servers />
   </component>
