@@ -1,24 +1,29 @@
+<div class="col-12">
+
 
 <% if current_user %>
-  <h2>Hola <%= current_user.profile.full_name %></h2>
+    <div>
+<!--      <h2><%#= current_user.profile.full_name %></h2>-->
+
+    </div>
+
+  <div class="mt-4">
+
+    <h4>Cursos</h4>
+    <% @courses.each do |course_per_user| %>
+      <ul class="list-group">
+          <li class="list-group-item text-primary"><%= link_to course_per_user.course.title, course_per_user %></li>
+        </ul>
+    <% end %>
+  </div>
 
 
-  <h1>Cursos</h1>
-  <% @courses.each do |course_per_user| %>
-    <p>
-      <%= link_to course_per_user.course.title, course_per_user %>
-    </p>
-  <% end %>
+  <div class="mt-4">
+    <%= link_to "Sign out", destroy_user_session_path, 'data-turbo-method': :delete, :class => "btn btn-primary"  %>
+
+  </div>
 
 
-  <% if current_user.admin? %>
-    There are <%= User.count %> users
-  <% end %>
-  <p>
-
-  </p>
-
-  <%= link_to "Sign out", destroy_user_session_path, 'data-turbo-method': :delete  %>
 <% else  %>
   <p>You are not signed in.</p>
   <%= link_to "Sign Up!", new_user_registration_path  %>
@@ -29,3 +34,4 @@
 video
 
 <% end %>
+</div>
