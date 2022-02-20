@@ -10,7 +10,7 @@ class User < ApplicationRecord
   enum role: [:user, :moderator, :admin]
   after_initialize :set_default_role, :if => :new_record?
 
-  has_many :course_per_users
+  has_many :courses
   has_one :profile
 
 
@@ -19,8 +19,8 @@ class User < ApplicationRecord
   end
 
   def create_first_course
-    first_course = Course.first
-    CoursePerUser.create(user: self, course: first_course)
+    first_course = BaseCourse.first
+    Course.create(user: self, base_course: first_course)
   end
 
 

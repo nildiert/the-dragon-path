@@ -1,11 +1,10 @@
 class CreateVideos < ActiveRecord::Migration[7.0]
   def change
     create_table :videos do |t|
-      t.string :title
-      t.string :url
-      t.integer :order
+      t.references :user, null: false, foreign_key: true
+      t.references :base_video, null: false, foreign_key: true
       t.references :course, null: false, foreign_key: true
-      t.integer :status
+      t.integer :status, default: :unfinished
 
       t.timestamps
     end

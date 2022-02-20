@@ -1,10 +1,10 @@
-<%= form_with(model: course) do |form| %>
-  <% if course.errors.any? %>
+<%= form_with(model: course_per_user) do |form| %>
+  <% if course_per_user.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
+      <h2><%= pluralize(course_per_user.errors.count, "error") %> prohibited this course_per_user from being saved:</h2>
 
       <ul>
-        <% course.errors.each do |error| %>
+        <% course_per_user.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
@@ -12,23 +12,18 @@
   <% end %>
 
   <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.text_field :user_id %>
   </div>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+    <%= form.label :course_id, style: "display: block" %>
+    <%= form.text_field :course_id %>
   </div>
 
   <div>
-    <%= form.label :order, style: "display: block" %>
-    <%= form.number_field :order %>
-  </div>
-
-  <div>
-    <%= form.label :next_id, style: "display: block" %>
-    <%= form.text_field :next_id %>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.number_field :status %>
   </div>
 
   <div>

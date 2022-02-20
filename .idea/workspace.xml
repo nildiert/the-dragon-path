@@ -5,9 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="451243a4-6c18-4095-8ae8-587205b9649b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/models/course_per_user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/course_per_user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/video_per_user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/video_per_user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20220215032942_create_video_per_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20220215032942_create_video_per_users.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/courses_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/base_courses_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/videos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/base_videos_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/courses/_course.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/base_courses/_course.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/courses/_course.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/base_courses/_course.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/courses/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/base_courses/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/courses/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/base_courses/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/courses/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/base_courses/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/courses/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/base_courses/index.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/courses/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/base_courses/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/courses/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/base_courses/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/courses/show.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/base_courses/show.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/videos/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/base_videos/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/videos/_video.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/base_videos/_video.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/videos/_video.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/base_videos/_video.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/videos/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/base_videos/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/videos/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/base_videos/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/videos/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/base_videos/index.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/videos/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/base_videos/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/videos/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/base_videos/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/videos/show.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/base_videos/show.json.jbuilder" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20220215032254_create_courses.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20220215032254_create_base_courses.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20220215032440_create_videos.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20220215032440_create_base_videos.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20220215032841_create_course_per_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20220215032841_create_courses.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20220215032942_create_video_per_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20220215032942_create_videos.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +180,9 @@
       <workItem from="1644889774561" duration="1235000" />
       <workItem from="1644891216092" duration="11000" />
       <workItem from="1644891252918" duration="13000" />
-      <workItem from="1644891310762" duration="17213000" />
+      <workItem from="1644891310762" duration="17935000" />
+      <workItem from="1645322426307" duration="198000" />
+      <workItem from="1645322646696" duration="151000" />
     </task>
     <servers />
   </component>

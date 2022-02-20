@@ -1,58 +1,58 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: %i[ show edit update destroy ]
 
-  # GET /courses or /courses.json
+  # GET /course_per_users or /course_per_users.json
   def index
     @courses = Course.all
   end
 
-  # GET /courses/1 or /courses/1.json
+  # GET /course_per_users/1 or /course_per_users/1.json
   def show
   end
 
-  # GET /courses/new
+  # GET /course_per_users/new
   def new
-    @course = Course.new
+    @course_per_user = CoursePerUser.new
   end
 
-  # GET /courses/1/edit
+  # GET /course_per_users/1/edit
   def edit
   end
 
-  # POST /courses or /courses.json
+  # POST /course_per_users or /course_per_users.json
   def create
-    @course = Course.new(course_params)
+    @course_per_user = CoursePerUser.new(course_per_user_params)
 
     respond_to do |format|
-      if @course.save
-        format.html { redirect_to course_url(@course), notice: "Course was successfully created." }
-        format.json { render :show, status: :created, location: @course }
+      if @course_per_user.save
+        format.html { redirect_to course_per_user_url(@course_per_user), notice: "Course per user was successfully created." }
+        format.json { render :show, status: :created, location: @course_per_user }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @course.errors, status: :unprocessable_entity }
+        format.json { render json: @course_per_user.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # PATCH/PUT /courses/1 or /courses/1.json
+  # PATCH/PUT /course_per_users/1 or /course_per_users/1.json
   def update
     respond_to do |format|
-      if @course.update(course_params)
-        format.html { redirect_to course_url(@course), notice: "Course was successfully updated." }
-        format.json { render :show, status: :ok, location: @course }
+      if @course_per_user.update(course_per_user_params)
+        format.html { redirect_to course_per_user_url(@course_per_user), notice: "Course per user was successfully updated." }
+        format.json { render :show, status: :ok, location: @course_per_user }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @course.errors, status: :unprocessable_entity }
+        format.json { render json: @course_per_user.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # DELETE /courses/1 or /courses/1.json
+  # DELETE /course_per_users/1 or /course_per_users/1.json
   def destroy
-    @course.destroy
+    @course_per_user.destroy
 
     respond_to do |format|
-      format.html { redirect_to courses_url, notice: "Course was successfully destroyed." }
+      format.html { redirect_to course_per_users_url, notice: "Course per user was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -65,6 +65,6 @@ class CoursesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def course_params
-      params.require(:course).permit(:title, :description, :order)
+      params.require(:course).permit(:user_id, :course_id, :status)
     end
 end

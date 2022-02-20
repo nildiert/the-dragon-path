@@ -1,10 +1,38 @@
+
+<div class="col-12">
+
+
 <p style="color: green"><%= notice %></p>
 
-<%= render @course %>
+<%  @course.videos.each do |video| %>
+  <% if video.current? %>
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe style="width: 58vw;height: 58vh;position: relative;" src='https://www.youtube.com/embed/<%= YoutubeID.from(video.base_video.url) %>?rel=0&autoplay=<%= params[:autoplay] || 1 %>' allowfullscreen></iframe>
+    </div>
+  <% end %>
+<% end %>
+<%  @course.videos.each do |video| %>
+    <ul class="list-group">
+      <% if video.current? %>
+        <li class="list-group-item text-primary"><%= video.base_video.title %></li>
+      <% else %>
+        <li class="list-group-item text-secondary">
+          <%= video.base_video.title %>
+        </li>
+      <% end %>
+    </ul>
+<% end %>
 
-<div>
-  <%= link_to "Edit this course", edit_course_path(@course) %> |
-  <%= link_to "Back to courses", courses_path %>
-
-  <%= button_to "Destroy this course", @course, method: :delete %>
 </div>
+<div class="col-12 mt-3">
+  <%=  link_to "Atrás", root_url, :class => "btn btn-primary" %>
+</div>
+
+
+<%#= YoutubeID.from("http://www.youtube.com/watch?v=RCUkmUXMd_k") %>
+<!--<div>-->
+<!--  <%#= link_to "Edit this course per user", edit_course_per_user_path(@course_per_user) %> |-->
+  <%#= link_to "Back to course per users", course_per_users_path %>
+
+  <%#= button_to "Destroy this course per user", @course_per_user, method: :delete %>
+<!--</div>-->

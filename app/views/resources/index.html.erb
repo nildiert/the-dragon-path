@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Resources</h1>
+
+<div id="resources">
+  <% @resources.each do |resource| %>
+    <%= render resource %>
+    <p>
+      <%= link_to "Show this resource", resource %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New resource", new_resource_path %>

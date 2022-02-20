@@ -4,7 +4,7 @@ class HomeController < ApplicationController
 
   def index
     if user_signed_in?
-      @courses = current_user.course_per_users
+      @courses = current_user.courses
     end
   end
 end

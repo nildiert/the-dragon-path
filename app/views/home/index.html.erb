@@ -10,9 +10,9 @@
   <div class="mt-4">
 
     <h4>Cursos</h4>
-    <% @courses.each do |course_per_user| %>
+    <% @courses.each do |course| %>
       <ul class="list-group">
-          <li class="list-group-item text-primary"><%= link_to course_per_user.course.title, course_per_user %></li>
+          <li class="list-group-item text-primary"><%= link_to course.base_course.title, course %></li>
         </ul>
     <% end %>
   </div>

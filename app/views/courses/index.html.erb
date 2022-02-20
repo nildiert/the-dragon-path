@@ -1,14 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Courses</h1>
+<h1>Course per users</h1>
 
-<div id="courses">
-  <% @courses.each do |course| %>
-    <%= render course %>
+<div id="course_per_users">
+  <% @course_per_users.each do |course_per_user| %>
+    <%= render course_per_user %>
+
     <p>
-      <%= link_to "Show this course", course %>
+      <%= link_to "Show this course per user", course_per_user %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New course", new_course_path %>
+<%= link_to "New course per user", new_course_per_user_path %>

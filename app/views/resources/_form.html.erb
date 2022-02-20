@@ -1,0 +1,32 @@
+<%= form_with(model: resource) do |form| %>
+  <% if resource.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(resource.errors.count, "error") %> prohibited this resource from being saved:</h2>
+
+      <ul>
+        <% resource.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :url, style: "display: block" %>
+    <%= form.text_field :url %>
+  </div>
+
+  <div>
+    <%= form.label :base_course_id, style: "display: block" %>
+    <%= form.text_field :base_course_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
