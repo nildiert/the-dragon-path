@@ -1,5 +1,5 @@
 class BaseCourse < ApplicationRecord
   has_many :base_videos
-  has_many :tasks
+  belongs_to :base_task
   has_many :resources
 end

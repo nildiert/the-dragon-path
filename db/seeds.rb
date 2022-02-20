@@ -6,16 +6,28 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-
+task_course_1 = BaseTask.create(
+  title: "Album example",
+  description: "Abajo encontrarás una url, debes crear una pagina lo mas similar posible a la que esta en la url. No es necesario que sea responsive, pero seraá un plus para ti si así la quieres hacer.",
+  task_url: "https://getbootstrap.com/docs/5.1/examples/album/",
+  )
+task_course_2 = BaseTask.create(
+  title: "Pricing",
+  description: "Abajo encontrarás una url, debes crear una pagina lo mas similar posible a la que esta en la url. No es necesario que sea responsive, pero seraá un plus para ti si así la quieres hacer.",
+  task_url: "https://getbootstrap.com/docs/5.1/examples/pricing/",
+  )
 
 course_1 = BaseCourse.create(
   title: "HTML",
   description: "CSS, en español «Hojas de estilo en cascada», es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado.",
-  order: 1)
+  order: 1,
+  base_task: task_course_1
+)
 
 course_2 = BaseCourse.create(title: "CSS",
   description: "HTML (Lenguaje de Marcas de Hipertexto, del inglés HyperText Markup Language) es el componente más básico de la Web. Define el significado y la estructura del contenido web. ... HTML utiliza 'marcas' para etiquetar texto, imágenes y otro contenido para mostrarlo en un navegador Web.",
-  order: 2)
+  order: 2,
+ base_task: task_course_2)
 
 videos = BaseVideo.create(
   [{
@@ -65,3 +77,18 @@ videos = BaseVideo.create(
 user = User.create(email: "niljordan23@gmail.com", password: "20152005814", password_confirmation: "20152005814")
 
 profile = Profile.create(first_name: "Nildiert", last_name: "Jimenez Jaramillo", phone_number: "3192164645", user: user)
+Course.create(user: user, base_course: course_2)
+
+
+Resource.create([
+                  { title: 'Conceptos básicos de HTML', url: 'https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/HTML_basics', base_course: BaseCourse.all.first },
+                  { title: 'HTML Tutorial W3Schools', url: 'https://www.w3schools.com/html/default.asp', base_course: BaseCourse.all.first },
+                  { title: 'HTML Tutorial tutorialspoint', url: 'https://www.tutorialspoint.com/html/index.htm', base_course: BaseCourse.all.first },
+                  { title: 'CSS Selectors', url: 'https://www.w3schools.com/css/css_selectors.asp', base_course: BaseCourse.all.second },
+                  { title: 'CSS Text', url: 'https://www.w3schools.com/css/css_text.asp', base_course: BaseCourse.all.second },
+                  { title: 'CSS Tables', url: 'https://www.w3schools.com/css/css_table.asp', base_course: BaseCourse.all.second },
+                  { title: 'CSS Cheatsheet', url: 'https://overapi.com/css', base_course: BaseCourse.all.second },
+                  { title: 'A Complete Guide to Flexbox', url: 'https://css-tricks.com/snippets/css/a-guide-to-flexbox/', base_course: BaseCourse.all.second }
+                ]
+)
+

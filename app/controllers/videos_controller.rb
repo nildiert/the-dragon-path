@@ -11,6 +11,12 @@ class VideosController < ApplicationController
   # GET /video_per_users/1 or /video_per_users/1.json
   def show
     @course = @video.course
+    @course.videos.current.each do |video|
+      if video.id != @video.id
+        video.update!(status: :finished)
+      end
+    end
+    @video.update!(status: :current)
     render show: { video: @video, course: @course, videos: @course.videos }
   end
 

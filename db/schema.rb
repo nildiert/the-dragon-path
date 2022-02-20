@@ -10,11 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_02_20_021636) do
+ActiveRecord::Schema[7.0].define(version: 2022_02_20_081942) do
   create_table "base_courses", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.integer "order"
+    t.integer "base_task_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["base_task_id"], name: "index_base_courses_on_base_task_id"
+  end
+
+  create_table "base_tasks", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "task_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -96,6 +106,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_20_021636) do
     t.index ["user_id"], name: "index_videos_on_user_id"
   end
 
+  add_foreign_key "base_courses", "base_tasks"
   add_foreign_key "base_videos", "base_courses"
   add_foreign_key "courses", "base_courses"
   add_foreign_key "courses", "users"

@@ -5,6 +5,9 @@ class Course < ApplicationRecord
   belongs_to :base_course
 
   has_many :videos
+  has_one :task
+
+  enum status: [:unfinished, :current, :finished]
 
   private
   def create_videos

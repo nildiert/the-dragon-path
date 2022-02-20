@@ -1,11 +1,9 @@
 <div id="<%= dom_id video %>">
 
-  <h2>
-    <%= video.base_video.title %>
-  </h2>
-
-  <div class="embed-responsive embed-responsive-16by9">
-    <iframe style="width: 58vw;height: 58vh;position: relative;" src='https://www.youtube.com/embed/<%= YoutubeID.from(video.base_video.url) %>?rel=0&autoplay=<%= params[:autoplay] || 1 %>' allowfullscreen></iframe>
+  <div class="row mt-2">
+        <iframe class="col-lg-12 col-md-12 col-sm-12" height="420" src='https://www.youtube.com/embed/<%= YoutubeID.from(video.base_video.url) %>?rel=0&autoplay=<%= params[:autoplay] || 1 %>' allowfullscreen>
+        </iframe>
   </div>
+
 
 </div>

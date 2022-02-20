@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :base_tasks
   resources :resources
   resources :profiles
   resources :tasks
