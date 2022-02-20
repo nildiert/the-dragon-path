@@ -1,18 +1,22 @@
-class VideoPerUsersController < ApplicationController
-  before_action :set_video_per_user, only: %i[ show edit update destroy ]
+class VideosController < ApplicationController
+  before_action :set_video, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
+
 
   # GET /video_per_users or /video_per_users.json
   def index
-    @video_per_users = VideoPerUser.all
+    @videos = current_user.videos.all
   end
 
   # GET /video_per_users/1 or /video_per_users/1.json
   def show
+    @course = @video.course
+    render show: { video: @video, course: @course, videos: @course.videos }
   end
 
   # GET /video_per_users/new
   def new
-    @video_per_user = VideoPerUser.new
+    @video = current_user.video.new
   end
 
   # GET /video_per_users/1/edit
@@ -21,7 +25,7 @@ class VideoPerUsersController < ApplicationController
 
   # POST /video_per_users or /video_per_users.json
   def create
-    @video_per_user = VideoPerUser.new(video_per_user_params)
+    @video = current_user.video.new(video_per_user_params)
 
     respond_to do |format|
       if @video_per_user.save
@@ -59,12 +63,14 @@ class VideoPerUsersController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_video_per_user
-      @video_per_user = VideoPerUser.find(params[:id])
-    end
+
+  def set_video
+    @video = current_user.videos.find(params[:id])
+  end
+
 
     # Only allow a list of trusted parameters through.
-    def video_per_user_params
-      params.require(:video_per_user).permit(:user_id, :video_id, :status)
-    end
+  def video_params
+    params.require(:video).permit(:user_id, :video_id, :status)
+  end
 end

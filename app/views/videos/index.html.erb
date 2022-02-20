@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Video per users</h1>
+
+<div id="video_per_users">
+  <% @videos.each do |video| %>
+    <%= render video %>
+    <p>
+      <%#= link_to "Show this video per user", video %>
+    </p>
+  <% end %>
+</div>
+
+<%#= link_to "New video per user", new_video_path %>

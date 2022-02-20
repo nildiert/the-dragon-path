@@ -16,4 +16,10 @@ class Course < ApplicationRecord
       videos.first.update(status: :current)
     end
   end
+
+  def order_videos
+    binding.break
+  end
+
+
 end

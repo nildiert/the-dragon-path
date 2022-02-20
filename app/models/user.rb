@@ -11,6 +11,7 @@ class User < ApplicationRecord
   after_initialize :set_default_role, :if => :new_record?
 
   has_many :courses
+  has_many :videos
   has_one :profile
 
 

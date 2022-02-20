@@ -1,0 +1,24 @@
+
+<h1>
+  <%= @course.base_course.title %>
+</h1>
+
+
+<%#= @course.videos %>
+
+<%= render @video %>
+
+
+<%= render 'videos/playlist', { videos: @course.videos, video: @video } %>
+
+<div class="col-12 mt-3">
+  <%=  link_to "Atrás", root_url, :class => "btn btn-primary" %>
+</div>
+
+
+<div>
+<!--  <%#= link_to "Edit this video per user", edit_video_per_user_path(@video_per_user) %> |-->
+  <%#= link_to "Back to video per users", video_per_users_path %>
+
+  <%#= button_to "Destroy this video per user", @video_per_user, method: :delete %>
+</div>

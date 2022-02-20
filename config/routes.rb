@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   resources :resources
   resources :profiles
   resources :tasks
-  resources :videos
-  resources :courses
+  resources :courses do
+    resources :videos
+  end
+
   resources :base_videos
   resources :base_courses
   root "home#index"

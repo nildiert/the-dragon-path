@@ -14,9 +14,16 @@
 <%  @course.videos.each do |video| %>
     <ul class="list-group">
       <% if video.current? %>
-        <li class="list-group-item text-primary"><%= video.base_video.title %></li>
-      <% else %>
-        <li class="list-group-item text-secondary">
+        <li class="list-group-item text-primary ">
+          <%= video.base_video.title %>
+        </li>
+      <% elsif video.finished? %>
+        <li class="list-group-item text-dark">
+          <%= video.base_video.title %>
+        </li>
+      <% elsif video.unfinished? %>
+        <li class="list-group-item text-muted">
+          <%#= link_to video.base_video.title, chose_video_courses_path(video, video.id)  %>
           <%= video.base_video.title %>
         </li>
       <% end %>
