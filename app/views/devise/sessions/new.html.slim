@@ -1,0 +1,18 @@
+h1[class = "text-3xl font-bold underline"]
+  |Hola
+.col-4
+.col-4
+  h2
+    | Log in
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    div[class = "flex-col"]
+      = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "your.email@example.me", class: "field"
+      = f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "field"
+    - if devise_mapping.rememberable?
+    div[class = "flex-row"]
+        = f.check_box :remember_me
+        = f.label :remember_me
+    .actions
+      = f.submit "Log in", data: {turbo: false}
+    = render "devise/shared/links"
+.col-4

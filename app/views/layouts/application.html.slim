@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title
+      | DragonPath
+    meta[name="viewport" content="width=device-width,initial-scale=1"]
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "application", media: 'all', "data-turbo-track": "reload"
+    = javascript_importmap_tags
+    link[rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"]
+  body
+    .container
+      .row.d-flex.justify-content-center
+        = yield
