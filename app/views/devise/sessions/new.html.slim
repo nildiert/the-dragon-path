@@ -1,18 +1,15 @@
-h1[class = "text-3xl font-bold underline"]
-  |Hola
-.col-4
-.col-4
-  h2
-    | Log in
-  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-    div[class = "flex-col"]
-      = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "your.email@example.me", class: "field"
-      = f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "field"
-    - if devise_mapping.rememberable?
-    div[class = "flex-row"]
-        = f.check_box :remember_me
-        = f.label :remember_me
-    .actions
-      = f.submit "Log in", data: {turbo: false}
-    = render "devise/shared/links"
-.col-4
+.w-100.d-flex.justify-content-center.user-select-none
+  .border.mt-5.rounded.p-2.width-login
+    .w-100.d-flex.justify-content-center
+      = image_tag "dragonpathlogo.png", class: "w-75 my-3"
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      div[class = "d-flex flex-column justify-content-center"]
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "your.email@example.me", class: "field form-control rounded  border lh-lg mb-2"
+        = f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "form-control rounded field border lh-lg mb-2"
+      - if devise_mapping.rememberable?
+      div[class = "flex-row form-check form-switch mx-5"]
+          = f.check_box :remember_me, class: "form-check-input"
+          = f.label :remember_me, class: "form-check-label"
+      .actions.d-flex.justify-content-center.my-3
+        = f.submit "Log in", data: {turbo: false}, class: "btn btn-outline-primary lh-sm"
+      = render "devise/shared/links"
