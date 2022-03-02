@@ -1,4 +1,4 @@
 class BaseTask < ApplicationRecord
-  has_one :base_course
+  belongs_to :base_course
 end
 
