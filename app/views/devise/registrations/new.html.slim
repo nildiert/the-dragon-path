@@ -1,0 +1,24 @@
+.w-100.d-flex.justify-content-center.user-select-none
+  .border.mt-5.rounded.p-2.width-login
+    .w-100.d-flex.flex-column.justify-content-center
+      h4.my-3
+        = render "devise/shared/links"
+        = "/Registro"
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "tu.email@ejemplo.me", class: "field form-control rounded  border lh-lg mb-2"
+        - if resource.errors.full_messages_for(:email).any?
+        - resource.errors.full_messages_for(:email).each do |message|
+          p[class="text-xs"]
+            = message
+        = f.password_field :password, autocomplete: "new-password", placeholder: "Contraseña", class: "field form-control rounded  border lh-lg mb-2"
+        - if resource.errors.full_messages_for(:password).any?
+        - resource.errors.full_messages_for(:password).each do |message|
+          p[class="text-xs"]
+            = message
+        = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "confirmación de contraseña", class: "field form-control rounded  border lh-lg mb-2"
+        - if resource.errors.full_messages_for(:password_confirmation).any?
+        - resource.errors.full_messages_for(:password_confirmation).each do |message|
+          p[class="text-xs"]
+            = message
+        .actions.d-flex.flex-row.justify-content-center
+          = f.submit "Registrar", data: {turbo: false}, class: "btn btn-outline-primary lh-sm"

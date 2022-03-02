@@ -1,0 +1,15 @@
+.w-100.d-flex.justify-content-center.user-select-none
+  .border.mt-5.rounded.p-2.width-login
+    .w-100.d-flex.justify-content-center
+      = image_tag "dragonpathlogo.png", class: "w-75 my-3"
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      div[class = "d-flex flex-column justify-content-center"]
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "tu.email@ejemplo.me", class: "field form-control rounded  border lh-lg mb-2"
+        = f.password_field :password, autocomplete: "current-password", placeholder: "Contraseña", class: "form-control rounded field border lh-lg mb-2"
+      - if devise_mapping.rememberable?
+      div[class = "flex-row form-check form-switch"]
+          = f.check_box :remember_me, class: "form-check-input"
+          = f.label "Recordar", class: "form-check-label text-muted"
+      .actions.d-flex.justify-content-center.my-3
+        = f.submit "Iniciar", data: {turbo: false}, class: "btn btn-outline-primary lh-sm"
+      = render "devise/shared/links"
