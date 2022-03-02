@@ -25,62 +25,103 @@ course_1 = BaseCourse.create(
 )
 
 course_2 = BaseCourse.create(title: "CSS",
-  description: "HTML (Lenguaje de Marcas de Hipertexto, del inglés HyperText Markup Language) es el componente más básico de la Web. Define el significado y la estructura del contenido web. ... HTML utiliza 'marcas' para etiquetar texto, imágenes y otro contenido para mostrarlo en un navegador Web.",
-  order: 2,
- base_task: task_course_2)
+                             description: "HTML (Lenguaje de Marcas de Hipertexto, del inglés HyperText Markup Language) es el componente más básico de la Web. Define el significado y la estructura del contenido web. ... HTML utiliza 'marcas' para etiquetar texto, imágenes y otro contenido para mostrarlo en un navegador Web.",
+                             order: 2,
+                             base_task: task_course_2)
 
 videos = BaseVideo.create(
   [{
-    title: "Curso Básico de HTML desde 0 - Introducción",
-    url: "https://www.youtube.com/watch?v=cqMfPS8jPys&list=PLhSj3UTs2_yVHt2DgHky_MzzRC58UHE4z",
-    order: 1,
-    base_course: course_1,
-    status: 1
-  },
-  {
-    title: "Curso Básico de HTML - 2. Etiquetas para Textos",
-    url: "https://www.youtube.com/watch?v=TNQleomUw6U&list=PLhSj3UTs2_yVHt2DgHky_MzzRC58UHE4z&index=2",
-    order: 2,
-    base_course: course_1,
-    status: 1
-  },
-  {
-    title: "Curso Básico de HTML - 3. Enlaces",
-    url: "https://www.youtube.com/watch?v=RdnS55MbdY4&list=PLhSj3UTs2_yVHt2DgHky_MzzRC58UHE4z&index=3",
-    order: 2,
-    base_course: course_1,
-    status: 1
-  },
-  {
-    title: "Curso Básico de CSS desde 0 - Introducción",
-    url: "https://www.youtube.com/watch?v=24gNhTcy6pw&list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR",
-    order: 1,
-    base_course: course_2,
-    status: 1
-  },
-  {
-    title: "Curso Basico de CSS - 2. Selectores",
-    url: "https://www.youtube.com/watch?v=uqkj7HQ7ids&list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR&index=2",
-    order: 1,
-    base_course: course_2,
-    status: 1
-  },
-  {
-    title: "Curso Basico de CSS - 3. Unidades de Medida",
-    url: "https://www.youtube.com/watch?v=BTv5Etachw0&list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR&index=3",
-    order: 1,
-    base_course: course_2,
-    status: 1
-  }])
+     title: "Curso Básico de HTML desde 0 - Introducción",
+     url: "https://www.youtube.com/watch?v=cqMfPS8jPys",
+     order: 1,
+     base_course: course_1,
+     status: 1
+   },
+   {
+     title: "Curso Básico de HTML - 2. Etiquetas para Textos",
+     url: "https://www.youtube.com/watch?v=TNQleomUw6U",
+     order: 2,
+     base_course: course_1,
+     status: 1
+   },
+   {
+     title: "Curso Básico de HTML - 3. Enlaces",
+     url: "https://www.youtube.com/watch?v=RdnS55MbdY4",
+     order: 3,
+     base_course: course_1,
+     status: 1
+   },
+   {
+     title: "Curso Básico de HTML - 4. Listas",
+     url: "https://www.youtube.com/watch?v=IRbEXqBBOCo",
+     order: 4,
+     base_course: course_1,
+     status: 1
+   },
+   {
+     title: "Curso Básico de HTML - 5. Imágenes",
+     url: "https://www.youtube.com/watch?v=lAoeALwWKo0",
+     order: 5,
+     base_course: course_1,
+     status: 1
+   },
+   {
+     title: "Curso Básico de HTML - 6. Tablas",
+     url: "https://www.youtube.com/watch?v=LmSUS6MuSzk",
+     order: 6,
+     base_course: course_1,
+     status: 1
+   },
+   {
+     title: "Curso Básico de HTML - 7. Formularios",
+     url: "https://www.youtube.com/watch?v=QDOfODwsfuQ",
+     order: 7,
+     base_course: course_1,
+     status: 1
+   },
+   {
+     title: "Curso Básico de HTML - 8. Creando una Estructura de Contenido / Layout",
+     url: "https://www.youtube.com/watch?v=yyYPFHAddvs",
+     order: 8,
+     base_course: course_1,
+     status: 1
+   },
+   {
+     title: "Curso Básico de HTML - 9. Metadatos y otras etiquetas",
+     url: "https://www.youtube.com/watch?v=eCV_-IHs5xQ",
+     order: 9,
+     base_course: course_1,
+     status: 1
+   },
+   {
+     title: "Curso Básico de CSS desde 0 - Introducción",
+     url: "https://www.youtube.com/watch?v=24gNhTcy6pw&list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR",
+     order: 1,
+     base_course: course_2,
+     status: 1
+   },
+   {
+     title: "Curso Basico de CSS - 2. Selectores",
+     url: "https://www.youtube.com/watch?v=uqkj7HQ7ids&list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR&index=2",
+     order: 1,
+     base_course: course_2,
+     status: 1
+   },
+   {
+     title: "Curso Basico de CSS - 3. Unidades de Medida",
+     url: "https://www.youtube.com/watch?v=BTv5Etachw0&list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR&index=3",
+     order: 1,
+     base_course: course_2,
+     status: 1
+   }])
 
+user = User.create!(email: "niljordan23@gmail.com", password: "20152005814", password_confirmation: "20152005814")
 
-user = User.create(email: "niljordan23@gmail.com", password: "20152005814", password_confirmation: "20152005814")
+profile = Profile.create!(first_name: "Nildiert", last_name: "Jimenez Jaramillo", phone_number: "3192164645", user: user)
 
-profile = Profile.create(first_name: "Nildiert", last_name: "Jimenez Jaramillo", phone_number: "3192164645", user: user)
-Course.create(user: user, base_course: course_2)
+Course.create!(user: user, base_course: course_2)
 
-
-Resource.create([
+Resource.create!([
                   { title: 'Conceptos básicos de HTML', url: 'https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/HTML_basics', base_course: BaseCourse.all.first },
                   { title: 'HTML Tutorial W3Schools', url: 'https://www.w3schools.com/html/default.asp', base_course: BaseCourse.all.first },
                   { title: 'HTML Tutorial tutorialspoint', url: 'https://www.tutorialspoint.com/html/index.htm', base_course: BaseCourse.all.first },

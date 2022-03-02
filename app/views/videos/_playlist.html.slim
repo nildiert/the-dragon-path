@@ -1,0 +1,15 @@
+ul.mt-1[style="padding-left: 0" ]
+  - videos.each do |video_to_show|
+    - if video_to_show.id == video.id
+      li.list-group-item.text-primary
+        i.far.fa-play.mx-1
+        = link_to video_to_show.base_video.title, url_for([video_to_show.course, video_to_show]), :class => "text-decoration-none"
+    - else
+      li.list-group-item.text-muted
+        -if video_to_show.finished?
+          i.far.fa-check-square.mx-1.text-success
+        -if video_to_show.current?
+          i.far.fa-play.mx-1
+        -if video_to_show.unfinished?
+          i.far.fa-square.mx-1
+        = link_to video_to_show.base_video.title, url_for([video_to_show.course, video_to_show]), :class => "text-muted text-decoration-none"
