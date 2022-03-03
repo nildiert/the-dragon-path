@@ -11,16 +11,17 @@
 
       .card-group
         - @courses.each do |course|
-          .card[style="width: 18rem;" class="m-3 border rounded"]
-            .card-body
-              h5.card-title
-                = course.base_course.title
-              h6.card-subtitle.mb-2.text-muted
-                | Card subtitle
-              p.card-text
-                | Some quick example text to build on the card title and make up the bulk of the card's content.
-              a.card-link[href="#"]
-                = link_to "More...", url_for([course, course.videos.current.first]), class: "text-decoration-none text-primary"
+          .col-md-4
+            .card[style="width: 28rem;" class="m-3 border rounded"]
+              .card-body
+                h5.card-title
+                  = course.base_course.title
+                h6.card-subtitle.mb-2.text-muted
+                  | Card subtitle
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card's content.
+                a.card-link[href="#"]
+                  = link_to "More...", url_for([course, course.videos.current.first]), class: "text-decoration-none text-primary"
   - else
     p
       | You are not signed in.
