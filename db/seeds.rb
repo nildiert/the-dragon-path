@@ -24,82 +24,33 @@ first_web_page = BaseCourse.create(
   order: 1
 )
 
+videos_first_webpage = BaseVideo.create([{
+                                           title: "CURSO COMPLETO: Crea una página web desde cero (HTML + CSS)",
+                                           url: "https://www.youtube.com/watch?v=TC8bT7zTdoE",
+                                           order: 1,
+                                           base_course: first_web_page
+                                         }])
+
+Resource.create(
+  [
+    { title: 'Glitch', url: 'https://glitch.com/', base_course: first_web_page },
+    { title: "codepen", base_course: first_web_page, url: "https://codepen.io/" },
+    { title: "Bootstrap", base_course: first_web_page, url: "https://getbootstrap.com/" },
+    { title: "Unsplash", base_course: first_web_page, url: "https://unsplash.com/" },
+    { title: "Picresize", base_course: first_web_page, url: "https://picresize.com/" },
+    { title: "Fontpair", base_course: first_web_page, url: "https://www.fontpair.co/" },
+    { title: "Google Fonts", base_course: first_web_page, url: "https://fonts.google.com/" },
+    { title: "unDraw", base_course: first_web_page, url: "https://undraw.co/illustrations" },
+    { title: "opendoodles", base_course: first_web_page, url: "https://www.opendoodles.com/" }])
+
+# =======================
+
+
 setup_course = BaseCourse.create(
   title: 'Configuración del entorno de desarrollo',
   description: '',
   order: 2
 )
-
-git_course = BaseCourse.create(
-  title: 'Curso Git',
-  description: '',
-  order: 3
-)
-
-html_course = BaseCourse.create(
-  title: 'Curso HTML',
-  description: '',
-  order: 4
-)
-
-css_course = BaseCourse.create(
-  title: 'Curso css',
-  description: '',
-  order: 5
-)
-
-flexbox_course = BaseCourse.create(
-  title: 'Flexbox',
-  description: '',
-  order: 6
-)
-
-grid_course = BaseCourse.create(
-  title: 'CSS Grid',
-  description: '',
-  order: 7
-)
-
-bootstrap_course = BaseCourse.create(
-  title: 'Bootstrap',
-  description: '',
-  order: 8
-)
-
-customize_bootstrap_course = BaseCourse.create(
-  title: 'Personalizar Bootstrap',
-  description: '',
-  order: 9
-)
-
-tailwind_course = BaseCourse.create(
-  title: 'Tailwind',
-  description: '',
-  order: 10
-)
-
-videos_first_webpage = BaseVideo.create([{
-   title: "CURSO COMPLETO: Crea una página web desde cero (HTML + CSS)",
-   url: "https://www.youtube.com/watch?v=TC8bT7zTdoE",
-   order: 1,
-   base_course: first_web_page
- }])
-
-Resource.create(
-  [
-   { title: 'Glitch', url: 'https://glitch.com/', base_course: first_web_page },
-   { title: "codepen", base_course: first_web_page, url: "https://codepen.io/" },
-   { title: "Bootstrap", base_course: first_web_page, url: "https://getbootstrap.com/" },
-   { title: "Unsplash", base_course: first_web_page, url: "https://unsplash.com/" },
-   { title: "Picresize", base_course: first_web_page, url: "https://picresize.com/" },
-   { title: "Fontpair", base_course: first_web_page, url: "https://www.fontpair.co/" },
-   { title: "Google Fonts", base_course: first_web_page, url: "https://fonts.google.com/" },
-   { title: "unDraw", base_course: first_web_page, url: "https://undraw.co/illustrations" },
-   { title: "opendoodles", base_course: first_web_page, url: "https://www.opendoodles.com/" }])
-
-
-
-
 
 
 videos_setup_course = BaseVideo.create([
@@ -113,54 +64,116 @@ Resource.create(
   { title: "Los mejores plugins de Visual Studio Code para desarrolladores web", url: "https://profile.es/blog/visual-studio-code-plugins/", base_course: setup_course }]
 )
 
+
+# =======================
+
+
+git_course = BaseCourse.create(
+  title: 'Curso Git',
+  description: '',
+  order: 3
+)
+
 BaseVideo.create([
-  { title: "Curso practico git", url: "https://www.youtube.com/watch?v=HiXLkL42tMU", order: 1, base_course: git_course },
-  { title: "Cómo publicar un sitio web gratis con Github pages", url: "https://youtu.be/QaxgF4v4hms", order: 2, base_course: git_course }])
+                   { title: "Curso practico git", url: "https://www.youtube.com/watch?v=HiXLkL42tMU", order: 1, base_course: git_course },
+                   { title: "Cómo publicar un sitio web gratis con Github pages", url: "https://youtu.be/QaxgF4v4hms", order: 2, base_course: git_course }])
 
 Resource.create(
-[
-  { title: "¿Cómo se utiliza Github pages?", url: "https://developer.mozilla.org/es/docs/Learn/Common_questions/Using_Github_pages", base_course: git_course },
-  { title: "Qué es Git", url: "https://www.atlassian.com/es/git/tutorials/what-is-git", base_course: git_course },
-  { title: "git Cheat Sheet", url: "https://overapi.com/git", base_course: git_course },
-  { title: "git - la guía sencilla", url: "https://rogerdudler.github.io/git-guide/index.es.html", base_course: git_course }])
+  [
+    { title: "¿Cómo se utiliza Github pages?", url: "https://developer.mozilla.org/es/docs/Learn/Common_questions/Using_Github_pages", base_course: git_course },
+    { title: "Qué es Git", url: "https://www.atlassian.com/es/git/tutorials/what-is-git", base_course: git_course },
+    { title: "git Cheat Sheet", url: "https://overapi.com/git", base_course: git_course },
+    { title: "git - la guía sencilla", url: "https://rogerdudler.github.io/git-guide/index.es.html", base_course: git_course }])
+
+
+# =======================
+html_course = BaseCourse.create(
+  title: 'Curso HTML',
+  description: '',
+  order: 4
+)
+
 
 BaseVideo.create([
-   { title: "Curso de HTML5 desde CERO (Completo)", url: "https://www.youtube.com/watch?v=kN1XP-Bef7w&t=3391s", base_course: html_course, order: 1 },
-   { title: "Curso HTML para Principiantes", url: "https://www.youtube.com/watch?v=rbuYtrNUxg4", base_course: html_course, order: 2 },
-   { title: "CURSO DE HTML AVANZADO 2020 | html en un solo vídeo", url: "https://www.youtube.com/watch?v=a4w7TCWV-dU&t=2242s", base_course: html_course, order: 3 }]
+                   { title: "Curso de HTML5 desde CERO (Completo)", url: "https://www.youtube.com/watch?v=kN1XP-Bef7w&t=3391s", base_course: html_course, order: 1 },
+                   { title: "Curso HTML para Principiantes", url: "https://www.youtube.com/watch?v=rbuYtrNUxg4", base_course: html_course, order: 2 },
+                   { title: "CURSO DE HTML AVANZADO 2020 | html en un solo vídeo", url: "https://www.youtube.com/watch?v=a4w7TCWV-dU&t=2242s", base_course: html_course, order: 3 }]
 )
 
 Resource.create(
   [
-  { title: "Conceptos básicos de HTML", url: "https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/HTML_basics", base_course: html_course },
-  { title: "HTML Tutorial W3Schools", url: "https://www.w3schools.com/html/default.asp", base_course: html_course },
-  { title: "HTML Tutorial tutorialspoint", url: "https://www.tutorialspoint.com/html/index.htm", base_course: html_course }
+    { title: "Conceptos básicos de HTML", url: "https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/HTML_basics", base_course: html_course },
+    { title: "HTML Tutorial W3Schools", url: "https://www.w3schools.com/html/default.asp", base_course: html_course },
+    { title: "HTML Tutorial tutorialspoint", url: "https://www.tutorialspoint.com/html/index.htm", base_course: html_course }
   ]
 )
 
+
+BaseTask.create(title: "Album", description: "", base_course: html_course, task_url: "https://getbootstrap.com/docs/5.1/examples/album/" )
+
+
+
+# =======================
+css_course = BaseCourse.create(
+  title: 'Curso CSS',
+  description: '',
+  order: 5
+)
+
 BaseVideo.create([
-  { title: '🚀 Curso CSS PARA PRINCIPIANTES desde CERO (DOMINA CSS3)', url: 'https://www.youtube.com/watch?v=LzlarZAtMYI&t=3568s', base_course: css_course, order: 1 },
-  { title: 'Curso de CSS desde CERO (Completo)', url: 'https://www.youtube.com/watch?v=OWKXEJN67FE&list=PLE8uP447fYpis_9iiaT1GrdOLmg85pAJB&index=2', base_course: css_course, order: 2 },
-  { title: 'Que rayos es la Metodología BEM explicado con un ejemplo | CSS', url: 'https://www.youtube.com/watch?v=bvnzyXGkNY4&t=1050s', base_course: css_course, order: 3 },
-  { title: '5 TIPS para ESCRIBIR un mejor CSS (Usado por PROFESIONALES)', url: 'https://www.youtube.com/watch?v=G417Cl-f07s', base_course: css_course, order: 4 }]
+                   { title: '🚀 Curso CSS PARA PRINCIPIANTES desde CERO (DOMINA CSS3)', url: 'https://www.youtube.com/watch?v=LzlarZAtMYI&t=3568s', base_course: css_course, order: 1 },
+                   { title: 'Curso de CSS desde CERO (Completo)', url: 'https://www.youtube.com/watch?v=OWKXEJN67FE&list=PLE8uP447fYpis_9iiaT1GrdOLmg85pAJB&index=2', base_course: css_course, order: 2 },
+                   { title: 'Que rayos es la Metodología BEM explicado con un ejemplo | CSS', url: 'https://www.youtube.com/watch?v=bvnzyXGkNY4&t=1050s', base_course: css_course, order: 3 },
+                   { title: '5 TIPS para ESCRIBIR un mejor CSS (Usado por PROFESIONALES)', url: 'https://www.youtube.com/watch?v=G417Cl-f07s', base_course: css_course, order: 4 }]
+)
+
+Resource.create([
+                  { title: "A Complete Guide to Flexbox", url: "https://flexboxfroggy.com/#es", base_course: css_course },
+                  { title: "FLEXBOX FROGGY", url: "https://css-tricks.com/snippets/css/a-guide-to-flexbox/§", base_course: css_course }]
+)
+
+BaseTask.create(title: "Pricing", description: "", base_course: css_course, task_url: "https://getbootstrap.com/docs/5.1/examples/pricing/" )
+
+
+# =======================
+flexbox_course = BaseCourse.create(
+  title: 'Flexbox',
+  description: '',
+  order: 6
+)
+
+BaseVideo.create([
+                   { title: 'Curso Flexbox CSS: (1/13) Introducción - #jonmircha', url: 'https://www.youtube.com/watch?v=AAtvnv6LNMk&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys', order: 1, base_course: flexbox_course },
+                   { title: 'Curso Flexbox CSS: (2/13) Conceptos Básicos - #jonmircha', url: 'https://www.youtube.com/watch?v=1NBMqQkcZ9Y&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=2', order: 2, base_course: flexbox_course },
+                   { title: 'Curso Flexbox CSS: (3/13) El flujo de Flexbox ( flex-direction + flex-wrap ) - #jonmircha', url: 'https://www.youtube.com/watch?v=lnWBQ3dMzhw&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=3', order: 3, base_course: flexbox_course },
+                   { title: 'Curso Flexbox CSS: (4/13) Alineación del Main Axis ( justify-content ) - #jonmircha', url: 'https://www.youtube.com/watch?v=4eHB6O8d1R0&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=4', order: 4, base_course: flexbox_course },
+                   { title: 'Curso Flexbox CSS: (5/13) Alineación del Cross Axis ( align-items y align-content ) - #jonmircha', url: 'https://www.youtube.com/watch?v=ELP5l8IVSJo&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=5', order: 5, base_course: flexbox_course },
+                   { title: 'Curso Flexbox CSS: (6/13) Factor de Crecimiento ( flex-grow ) - #jonmircha', url: 'https://www.youtube.com/watch?v=Ib9cYYBNQ10&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=6', order: 6, base_course: flexbox_course },
+                   { title: 'Curso Flexbox CSS: (7/13) Factor de Reducción ( flex-shrink ) - #jonmircha', url: 'https://www.youtube.com/watch?v=cN6O13okUww&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=7', order: 7, base_course: flexbox_course },
+                   { title: 'Curso Flexbox CSS: (8/13) Tamaño de los hijos flexbox ( flex-basis ) - #jonmircha', url: 'https://www.youtube.com/watch?v=jst2jcHDAWA&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=8', order: 8, base_course: flexbox_course },
+                   { title: 'Curso Flexbox CSS: (9/13) Orden y Alineación de hijos flexbox ( order y align-self ) - #jonmircha', url: 'https://www.youtube.com/watch?v=u-k1kPtOA5o&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=9', order: 9, base_course: flexbox_course },
+                   { title: 'Curso Flexbox CSS: (10/13) Maquetación y Responsive Design con Flexbox - #jonmircha', url: 'https://www.youtube.com/watch?v=KoLOOETh0f4&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=10', order: 10, base_course: flexbox_course },
+                   { title: 'Curso Flexbox CSS: (11/13) Casos Prácticos con Flexbox I - #jonmircha', url: 'https://www.youtube.com/watch?v=9TcStLE3qzI&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=11', order: 11, base_course: flexbox_course },
+                   { title: 'Curso Flexbox CSS: (12/13) Casos Prácticos con Flexbox II - #jonmircha', url: 'https://www.youtube.com/watch?v=po9V3IoxbJc&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=12', order: 12, base_course: flexbox_course },
+                   { title: 'Curso Flexbox CSS: (13/13) Bootstrap y Flexbox - #jonmircha', url: 'https://www.youtube.com/watch?v=z11iV2JKHVc&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=13', order: 13, base_course: flexbox_course }])
+
+Resource.create([
+  { title: "A Complete Guide to Flexbox", url: "https://css-tricks.com/snippets/css/a-guide-to-flexbox/", base_course: flexbox_course },
+  { title: "FLEXBOX FROGGY", url: "https://flexboxfroggy.com/#es", base_course: flexbox_course }])
+
+BaseTask.create([
+    { title: "Product", description: "", base_course: flexbox_course, task_url: "https://getbootstrap.com/docs/5.1/examples/product/" },
+    { title: "Checkout", description: "", base_course: flexbox_course, task_url: "https://getbootstrap.com/docs/5.1/examples/checkout/" }]
 )
 
 
-BaseVideo.create([
-   { title: 'Curso Flexbox CSS: (1/13) Introducción - #jonmircha', url: 'https://www.youtube.com/watch?v=AAtvnv6LNMk&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys', order: 1, base_course: flexbox_course },
-  { title: 'Curso Flexbox CSS: (2/13) Conceptos Básicos - #jonmircha', url: 'https://www.youtube.com/watch?v=1NBMqQkcZ9Y&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=2', order: 2, base_course: flexbox_course },
-  { title: 'Curso Flexbox CSS: (3/13) El flujo de Flexbox ( flex-direction + flex-wrap ) - #jonmircha', url: 'https://www.youtube.com/watch?v=lnWBQ3dMzhw&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=3', order: 3, base_course: flexbox_course },
-  { title: 'Curso Flexbox CSS: (4/13) Alineación del Main Axis ( justify-content ) - #jonmircha', url: 'https://www.youtube.com/watch?v=4eHB6O8d1R0&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=4', order: 4, base_course: flexbox_course },
-  { title: 'Curso Flexbox CSS: (5/13) Alineación del Cross Axis ( align-items y align-content ) - #jonmircha', url: 'https://www.youtube.com/watch?v=ELP5l8IVSJo&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=5', order: 5, base_course: flexbox_course },
-  { title: 'Curso Flexbox CSS: (6/13) Factor de Crecimiento ( flex-grow ) - #jonmircha', url: 'https://www.youtube.com/watch?v=Ib9cYYBNQ10&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=6', order: 6, base_course: flexbox_course },
-  { title: 'Curso Flexbox CSS: (7/13) Factor de Reducción ( flex-shrink ) - #jonmircha', url: 'https://www.youtube.com/watch?v=cN6O13okUww&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=7', order: 7, base_course: flexbox_course },
-  { title: 'Curso Flexbox CSS: (8/13) Tamaño de los hijos flexbox ( flex-basis ) - #jonmircha', url: 'https://www.youtube.com/watch?v=jst2jcHDAWA&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=8', order: 8, base_course: flexbox_course },
-  { title: 'Curso Flexbox CSS: (9/13) Orden y Alineación de hijos flexbox ( order y align-self ) - #jonmircha', url: 'https://www.youtube.com/watch?v=u-k1kPtOA5o&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=9', order: 9, base_course: flexbox_course },
-  { title: 'Curso Flexbox CSS: (10/13) Maquetación y Responsive Design con Flexbox - #jonmircha', url: 'https://www.youtube.com/watch?v=KoLOOETh0f4&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=10', order: 10, base_course: flexbox_course },
-  { title: 'Curso Flexbox CSS: (11/13) Casos Prácticos con Flexbox I - #jonmircha', url: 'https://www.youtube.com/watch?v=9TcStLE3qzI&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=11', order: 11, base_course: flexbox_course },
-  { title: 'Curso Flexbox CSS: (12/13) Casos Prácticos con Flexbox II - #jonmircha', url: 'https://www.youtube.com/watch?v=po9V3IoxbJc&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=12', order: 12, base_course: flexbox_course },
-  { title: 'Curso Flexbox CSS: (13/13) Bootstrap y Flexbox - #jonmircha', url: 'https://www.youtube.com/watch?v=z11iV2JKHVc&list=PLvq-jIkSeTUbQc3dGsssp8lxAi5npMrys&index=13', order: 13, base_course: flexbox_course }])
+# =======================
 
+grid_course = BaseCourse.create(
+  title: 'CSS Grid',
+  description: '',
+  order: 7
+)
 
 BaseVideo.create(
   [
@@ -185,49 +198,114 @@ BaseVideo.create(
   ]
 )
 
+Resource.create([
+  { title: 'learncssgrid', url: 'https://learncssgrid.com/', base_course: grid_course },
+  { title: 'Grid Garden', url: 'https://codepip.com/games/grid-garden/', base_course: grid_course },
+  { title: 'A Complete Guide to Grid', url: 'https://css-tricks.com/snippets/css/complete-guide-grid/', base_course: grid_course },
+  { title: 'CSS Grid Layout Module', url: 'https://www.w3schools.com/css/css_grid.asp', base_course: grid_course },
+  { title: 'CSS grid: diseño con función inteligente', url: 'https://www.ionos.es/digitalguide/paginas-web/creacion-de-paginas-web/css-grid-layout/', base_course: grid_course },
+  { title: 'CSS Grid Layout', url: 'https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout', base_course: grid_course}])
+
+BaseTask.create( title: "Blog", description: "", base_course: grid_course, task_url: "https://getbootstrap.com/docs/4.0/examples/blog/")
+
+
+# =======================
+bootstrap_course = BaseCourse.create(
+  title: 'Bootstrap',
+  description: '',
+  order: 8
+)
+
 BaseVideo.create([
-  { title: 'Bootstrap4 Curso Completo | Introducción ¿Qué es Bootstrap4?', url: 'https://www.youtube.com/watch?v=7s1RjItUBqU&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9', base_course: bootstrap_course, order: 1 },
-  { title: 'Bootstrap4 Curso Completo | Instalando Bootstrap 4, Clase 2', url: 'https://www.youtube.com/watch?v=WdGxzGpVNvA&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=2', base_course: bootstrap_course, order: 2 },
-  { title: 'Bootstrap4 Curso Completo | Tipografías en Bootstrap 4 Clase 3', url: 'https://www.youtube.com/watch?v=dLkwOYDu0xY&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=3', base_course: bootstrap_course, order: 3 },
-  { title: 'Bootstrap4 Curso Completo | Alineación de textos en Bootststrap 4, Clase 4', url: 'https://www.youtube.com/watch?v=cLRKFGlOtM0&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=4', base_course: bootstrap_course, order: 4 },
-  { title: 'Bootstrap4 Curso Completo | Floats y posiciones fijas en Bootststrap 4, Clase 5', url: 'https://www.youtube.com/watch?v=QBnz6sya3Cs&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=5', base_course: bootstrap_course, order: 5 },
-  { title: 'Bootstrap4 Curso Completo | Colores de Texto y Fondos en Bootststrap 4, Clase 6', url: 'https://www.youtube.com/watch?v=ATqWsTGiMSY&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=6', base_course: bootstrap_course, order: 6 },
-  { title: 'Bootstrap4 Curso Completo | Padding, Margenes y Espaciados en Bootststrap 4, Clase 7', url: 'https://www.youtube.com/watch?v=9dgRqXvgUDg&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=7', base_course: bootstrap_course, order: 7 },
-  { title: 'Bootstrap4 Curso Completo | Altos y Anchos en Bootststrap 4, Clase 8', url: 'https://www.youtube.com/watch?v=1NuhdqjER3U&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=8', base_course: bootstrap_course, order: 8 },
-  { title: 'Bootstrap4 Curso Completo | Breakpoints en Bootststrap 4, Clase 9', url: 'https://www.youtube.com/watch?v=a8Ph26Ldl-o&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=9', base_course: bootstrap_course, order: 9 },
-  { title: 'Bootstrap4 Curso Completo | Botones en Bootststrap 4, Clase 10', url: 'https://www.youtube.com/watch?v=kOPUj0GicgE&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=10', base_course: bootstrap_course, order: 10 },
-  { title: 'Bootstrap4 Curso Completo | List Groups, Badges y Migas de Pan, Clase 11', url: 'https://www.youtube.com/watch?v=0Mo6_bWc8Ho&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=11', base_course: bootstrap_course, order: 11 },
-  { title: 'Bootstrap4 Curso Completo | Navegación, Clase 12', url: 'https://www.youtube.com/watch?v=vE6CinkTvKY&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=12', base_course: bootstrap_course, order: 12 },
-  { title: 'Bootstrap4 Curso Completo | Alertas y Progress Bar, Clase 13', url: 'https://www.youtube.com/watch?v=3UscvdpXcTQ&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=13', base_course: bootstrap_course, order: 13 }]
+                   { title: 'Bootstrap4 Curso Completo | Introducción ¿Qué es Bootstrap4?', url: 'https://www.youtube.com/watch?v=7s1RjItUBqU&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9', base_course: bootstrap_course, order: 1 },
+                   { title: 'Bootstrap4 Curso Completo | Instalando Bootstrap 4, Clase 2', url: 'https://www.youtube.com/watch?v=WdGxzGpVNvA&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=2', base_course: bootstrap_course, order: 2 },
+                   { title: 'Bootstrap4 Curso Completo | Tipografías en Bootstrap 4 Clase 3', url: 'https://www.youtube.com/watch?v=dLkwOYDu0xY&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=3', base_course: bootstrap_course, order: 3 },
+                   { title: 'Bootstrap4 Curso Completo | Alineación de textos en Bootststrap 4, Clase 4', url: 'https://www.youtube.com/watch?v=cLRKFGlOtM0&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=4', base_course: bootstrap_course, order: 4 },
+                   { title: 'Bootstrap4 Curso Completo | Floats y posiciones fijas en Bootststrap 4, Clase 5', url: 'https://www.youtube.com/watch?v=QBnz6sya3Cs&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=5', base_course: bootstrap_course, order: 5 },
+                   { title: 'Bootstrap4 Curso Completo | Colores de Texto y Fondos en Bootststrap 4, Clase 6', url: 'https://www.youtube.com/watch?v=ATqWsTGiMSY&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=6', base_course: bootstrap_course, order: 6 },
+                   { title: 'Bootstrap4 Curso Completo | Padding, Margenes y Espaciados en Bootststrap 4, Clase 7', url: 'https://www.youtube.com/watch?v=9dgRqXvgUDg&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=7', base_course: bootstrap_course, order: 7 },
+                   { title: 'Bootstrap4 Curso Completo | Altos y Anchos en Bootststrap 4, Clase 8', url: 'https://www.youtube.com/watch?v=1NuhdqjER3U&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=8', base_course: bootstrap_course, order: 8 },
+                   { title: 'Bootstrap4 Curso Completo | Breakpoints en Bootststrap 4, Clase 9', url: 'https://www.youtube.com/watch?v=a8Ph26Ldl-o&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=9', base_course: bootstrap_course, order: 9 },
+                   { title: 'Bootstrap4 Curso Completo | Botones en Bootststrap 4, Clase 10', url: 'https://www.youtube.com/watch?v=kOPUj0GicgE&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=10', base_course: bootstrap_course, order: 10 },
+                   { title: 'Bootstrap4 Curso Completo | List Groups, Badges y Migas de Pan, Clase 11', url: 'https://www.youtube.com/watch?v=0Mo6_bWc8Ho&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=11', base_course: bootstrap_course, order: 11 },
+                   { title: 'Bootstrap4 Curso Completo | Navegación, Clase 12', url: 'https://www.youtube.com/watch?v=vE6CinkTvKY&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=12', base_course: bootstrap_course, order: 12 },
+                   { title: 'Bootstrap4 Curso Completo | Alertas y Progress Bar, Clase 13', url: 'https://www.youtube.com/watch?v=3UscvdpXcTQ&list=PLL0TiOXBeDagsYUYFO9WMwDtuDuoGZVB9&index=13', base_course: bootstrap_course, order: 13 }]
+)
+
+Resource.create([
+  { title: 'Free themes for Bootstrap', url: 'https://bootswatch.com/', base_course: bootstrap_course },
+  { title: 'Material Design for Bootstrap 5 & Vanilla JavaScript', url: 'https://mdbootstrap.com/docs/standard/#demo', base_course: bootstrap_course },
+  { title: 'bootstrapmade', url: 'https://bootstrapmade.com/', base_course: bootstrap_course }])
+
+
+BaseTask.create([
+                  { title: "headers", description: "", base_course: bootstrap_course, task_url: "https://getbootstrap.com/docs/5.1/examples/headers/" },
+                  { title: "heroes", description: "", base_course: bootstrap_course, task_url: "https://getbootstrap.com/docs/5.1/examples/heroes/" },
+                  { title: "features", description: "", base_course: bootstrap_course, task_url: "https://getbootstrap.com/docs/5.1/examples/features/" },
+                  { title: "sidebars", description: "", base_course: bootstrap_course, task_url: "https://getbootstrap.com/docs/5.1/examples/sidebars/" },
+                  { title: "footers", description: "", base_course: bootstrap_course, task_url: "https://getbootstrap.com/docs/5.1/examples/dropdowns/" },
+                  { title: "dropdowns", description: "", base_course: bootstrap_course, task_url: "https://getbootstrap.com/docs/5.1/examples/list-groups/" },
+                  { title: "groups", description: "", base_course: bootstrap_course, task_url: "https://getbootstrap.com/docs/5.1/examples/footers/" },
+                  { title: "modals", description: "", base_course: bootstrap_course, task_url: "https://getbootstrap.com/docs/5.1/examples/modals/" }])
+
+
+# =======================
+
+
+customize_bootstrap_course = BaseCourse.create(
+  title: 'Personalizar Bootstrap',
+  description: '',
+  order: 9
 )
 
 BaseVideo.create( title: '💜Cómo PERSONALIZAR los estilos CSS de Bootstrap 5 con SASS 😱 (PASO a PASO)', url: 'https://www.youtube.com/watch?v=A9i42AuaTLw&t=1037s', order: 1, base_course: customize_bootstrap_course )
+Resource.create(title: "Personalizando Bootstrap", base_course: customize_bootstrap_course, url: "https://guias.makeitreal.camp/bootstrap-4/personalizando-bootstrap" )
+BaseTask.create(title: "Trafalgar Landing Page", description: "", base_course: customize_bootstrap_course, task_url: "https://www.figma.com/file/EWmzcVkd7qbP5Nf7iMvuqP/Trafalgar-Landing-Page?node-id=0%3A1" )
 
 
-BaseVideo.create([
-  { title: 'Tailwind CSS - ⭐ Fundamentos desde Cero ⭐ [Tutorial en Español]', url: 'https://www.youtube.com/watch?v=3xlUAMXui2c&list=PLPl81lqbj-4JdoHDiERR2ptkw9zRggXAL', base_course: tailwind_course, order: 1 },
-  { title: 'Tailwind CSS ⭐ Grid ⭐ [Parte 2]', url: 'https://www.youtube.com/watch?v=97hHnlnxpPQ&list=PLPl81lqbj-4JdoHDiERR2ptkw9zRggXAL&index=2', base_course: tailwind_course, order: 2 },
-  { title: 'Tailwind CSS ⭐ Personalización - Instalación npm ⭐ [Parte 3]', url: 'https://www.youtube.com/watch?v=MwVfIP3vuw0&list=PLPl81lqbj-4JdoHDiERR2ptkw9zRggXAL&index=3', base_course: tailwind_course, order: 3 },
-  { title: 'Tailwind CSS ⭐ Flexbox ⭐ [Parte 4]', url: 'https://www.youtube.com/watch?v=sfTBUHR9pyA&list=PLPl81lqbj-4JdoHDiERR2ptkw9zRggXAL&index=4', base_course: tailwind_course, order: 4 },
-  { title: 'Tailwind CSS ⭐ Navbar Responsive ⭐ [Parte 5]', url: 'https://www.youtube.com/watch?v=16fc0YSn4o8&list=PLPl81lqbj-4JdoHDiERR2ptkw9zRggXAL&index=5', base_course: tailwind_course, order: 5 }]
+
+# =======================
+tailwind_course = BaseCourse.create(
+  title: 'Tailwind',
+  description: '',
+  order: 10
 )
 
+BaseVideo.create([
+                   { title: 'Tailwind CSS - ⭐ Fundamentos desde Cero ⭐ [Tutorial en Español]', url: 'https://www.youtube.com/watch?v=3xlUAMXui2c&list=PLPl81lqbj-4JdoHDiERR2ptkw9zRggXAL', base_course: tailwind_course, order: 1 },
+                   { title: 'Tailwind CSS ⭐ Grid ⭐ [Parte 2]', url: 'https://www.youtube.com/watch?v=97hHnlnxpPQ&list=PLPl81lqbj-4JdoHDiERR2ptkw9zRggXAL&index=2', base_course: tailwind_course, order: 2 },
+                   { title: 'Tailwind CSS ⭐ Personalización - Instalación npm ⭐ [Parte 3]', url: 'https://www.youtube.com/watch?v=MwVfIP3vuw0&list=PLPl81lqbj-4JdoHDiERR2ptkw9zRggXAL&index=3', base_course: tailwind_course, order: 3 },
+                   { title: 'Tailwind CSS ⭐ Flexbox ⭐ [Parte 4]', url: 'https://www.youtube.com/watch?v=sfTBUHR9pyA&list=PLPl81lqbj-4JdoHDiERR2ptkw9zRggXAL&index=4', base_course: tailwind_course, order: 4 },
+                   { title: 'Tailwind CSS ⭐ Navbar Responsive ⭐ [Parte 5]', url: 'https://www.youtube.com/watch?v=16fc0YSn4o8&list=PLPl81lqbj-4JdoHDiERR2ptkw9zRggXAL&index=5', base_course: tailwind_course, order: 5 }]
+)
+
+Resource.create(title: "flowbite", base_course: tailwind_course, url: "https://flowbite.com/" )
+
+BaseTask.create(
+[{ title: 'Components', task_url: 'https://www.figma.com/file/7l1Ar0sPDERTOqMYBqElAp/Landing-Page---Startup-App?node-id=0%3A6291', base_course: tailwind_course },
+{ title: 'Navigation', task_url: 'https://www.figma.com/file/7l1Ar0sPDERTOqMYBqElAp/Landing-Page---Startup-App?node-id=0%3A5403', base_course: tailwind_course },
+{ title: 'Hero', task_url: 'https://www.figma.com/file/7l1Ar0sPDERTOqMYBqElAp/Landing-Page---Startup-App?node-id=0%3A1', base_course: tailwind_course },
+{ title: 'Contents', task_url: 'https://www.figma.com/file/7l1Ar0sPDERTOqMYBqElAp/Landing-Page---Startup-App?node-id=0%3A656', base_course: tailwind_course },
+{ title: 'Features', task_url: 'https://www.figma.com/file/7l1Ar0sPDERTOqMYBqElAp/Landing-Page---Startup-App?node-id=0%3A1386', base_course: tailwind_course },
+{ title: 'Forms', task_url: 'https://www.figma.com/file/7l1Ar0sPDERTOqMYBqElAp/Landing-Page---Startup-App?node-id=0%3A3004', base_course: tailwind_course },
+{ title: 'Testimonials', task_url: 'https://www.figma.com/file/7l1Ar0sPDERTOqMYBqElAp/Landing-Page---Startup-App?node-id=148%3A998', base_course: tailwind_course },
+{ title: 'Ecommerce', task_url: 'https://www.figma.com/file/7l1Ar0sPDERTOqMYBqElAp/Landing-Page---Startup-App?node-id=2434%3A923', base_course: tailwind_course },
+{ title: 'Call to Action', task_url: 'https://www.figma.com/file/7l1Ar0sPDERTOqMYBqElAp/Landing-Page---Startup-App?node-id=0%3A3290', base_course: tailwind_course },
+{ title: 'Showcase', task_url: 'https://www.figma.com/file/7l1Ar0sPDERTOqMYBqElAp/Landing-Page---Startup-App?node-id=0%3A3825', base_course: tailwind_course },
+{ title: 'Team', task_url: 'https://www.figma.com/file/7l1Ar0sPDERTOqMYBqElAp/Landing-Page---Startup-App?node-id=0%3A4394', base_course: tailwind_course },
+{ title: 'Contacts', task_url: 'https://www.figma.com/file/7l1Ar0sPDERTOqMYBqElAp/Landing-Page---Startup-App?node-id=0%3A4706', base_course: tailwind_course },
+{ title: 'Pricing Tables', task_url: 'https://www.figma.com/file/7l1Ar0sPDERTOqMYBqElAp/Landing-Page---Startup-App?node-id=0%3A5099', base_course: tailwind_course },
+{ title: 'Pages', task_url: 'https://www.figma.com/file/7l1Ar0sPDERTOqMYBqElAp/Landing-Page---Startup-App?node-id=153%3A79', base_course: tailwind_course },
+{ title: 'Footers', task_url: 'https://www.figma.com/file/7l1Ar0sPDERTOqMYBqElAp/Landing-Page---Startup-App?node-id=153%3A228', base_course: tailwind_course },
+{ title: 'LaslesVPN', task_url: 'https://www.figma.com/file/y4g7B9BSJsuPkI101iyF5E/FREEBIES-Landingpage-LaslesVPN-(Community)?node-id=1%3A2', base_course: tailwind_course }])
+
+# =======================
 
 
 
 user = User.create!(email: "niljordan23@gmail.com", password: "20152005814", password_confirmation: "20152005814")
 
 profile = Profile.create!(first_name: "Nildiert", last_name: "Jimenez Jaramillo", phone_number: "3192164645", user: user)
-
-Course.create!(user: user, base_course: setup_course)
-Course.create!(user: user, base_course: git_course)
-Course.create!(user: user, base_course: html_course)
-Course.create!(user: user, base_course: css_course)
-Course.create!(user: user, base_course: flexbox_course)
-Course.create!(user: user, base_course: grid_course)
-Course.create!(user: user, base_course: bootstrap_course)
-Course.create!(user: user, base_course: customize_bootstrap_course)
-Course.create!(user: user, base_course: tailwind_course)
 
 
 

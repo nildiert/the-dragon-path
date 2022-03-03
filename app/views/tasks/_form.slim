@@ -1,0 +1,15 @@
+
+h5 = link_to task.base_task.title.capitalize, "#{task.base_task.task_url}", :target => "_blank"
+
+= form_with(model: task) do |form|
+    .row
+      .col-5
+        .form-group
+          = form.text_field :link_github, placeholder: "Link GitHub", class: "form-control mb-2 mr-sm-2"
+      .col-5
+        .form-group
+          = form.text_field :url, placeholder: "URL", class: "form-control mb-2 mr-sm-2"
+      .col-5
+        = form.submit "Enviar tarea", class: "btn btn-primary"
+
+

@@ -1,5 +1,5 @@
 ul.mt-1[style="padding-left: 0" ]
-  - videos.each do |video_to_show|
+  - videos.order(:order).each do |video_to_show|
     - if video_to_show.id == video.id
       li.list-group-item.text-primary
         i.far.fa-play.mx-1

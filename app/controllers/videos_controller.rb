@@ -11,7 +11,7 @@ class VideosController < ApplicationController
   # GET /video_per_users/1 or /video_per_users/1.json
   def show
     @course = @video.course
-    @base_task = nil
+    @tasks = @course.tasks
     @course.videos.current.each do |video|
       if video.id != @video.id
         video.update!(status: :finished)
@@ -22,7 +22,7 @@ class VideosController < ApplicationController
       video: @video,
       course: @course,
       videos: @course.videos,
-      base_task: @base_task
+      tasks: @tasks
     }
   end
 

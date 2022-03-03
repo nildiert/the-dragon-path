@@ -71,12 +71,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_20_021636) do
   end
 
   create_table "tasks", force: :cascade do |t|
+    t.integer "course_id", null: false
+    t.integer "base_task_id", null: false
     t.integer "user_id", null: false
     t.string "link_github"
     t.string "url"
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["base_task_id"], name: "index_tasks_on_base_task_id"
+    t.index ["course_id"], name: "index_tasks_on_course_id"
     t.index ["user_id"], name: "index_tasks_on_user_id"
   end
 
@@ -111,6 +115,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_20_021636) do
   add_foreign_key "courses", "users"
   add_foreign_key "profiles", "users"
   add_foreign_key "resources", "base_courses"
+  add_foreign_key "tasks", "base_tasks"
+  add_foreign_key "tasks", "courses"
   add_foreign_key "tasks", "users"
   add_foreign_key "videos", "base_videos"
   add_foreign_key "videos", "courses"

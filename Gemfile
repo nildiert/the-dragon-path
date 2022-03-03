@@ -77,5 +77,4 @@ gem "devise", "~> 4.8"
 gem "pg", "~> 1.3.3", group: :production
 gem 'rails_12factor', group: :production
 
-gem "tailwindcss-rails", "~> 2.0"
 gem 'devise-i18n'

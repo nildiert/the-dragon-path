@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
-  after_create :create_first_course
+  after_create :create_courses
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
@@ -19,9 +19,10 @@ class User < ApplicationRecord
     self.role ||= :user
   end
 
-  def create_first_course
-    first_course = BaseCourse.first
-    Course.create(user: self, base_course: first_course)
+  def create_courses
+    BaseCourse.all.each do |course|
+      Course.create(user: self, base_course: course)
+    end
   end
 
 

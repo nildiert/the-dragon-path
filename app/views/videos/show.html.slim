@@ -6,27 +6,28 @@
         |Cursos
       = " / " + @course.base_course.title + " / " + @video.base_video.title
 .row
-  .col-md-7
-    = render @video
-  .col-md-5.mt-2
-    = render 'videos/playlist', { videos: @course.videos, video: @video }
-  .col-12.mt-5
-    strong
-      |  Tarea: 
-    span
-      / = link_to @base_task.title, "#{@base_task.task_url}", :target => "_blank"
-  .col-12.mt-2
-    strong
-      | Descripción:
-    span
-      / = @base_task.description
-  .col-md-12
+  .col-12
     h3
       |  Recursos  xd
     ul
+
       - @course.base_course.resources.each do |resource|
         li
-          = link_to resource.title, "#{resource.url}", :target => "_blank"
+          = link_to resource.title.capitalize, "#{resource.url}", :target => "_blank"
+
+.row
+  .col-md-8
+    = render @video
+  .col-md-4.mt-2
+    = render 'videos/playlist', { videos: @course.videos, video: @video }
+
+
+  .col-7.mt-5
+    h2
+      |  Tareas:
+
+      - @tasks.each do |task|
+        = render 'tasks/form', {task: task }
 
 - #= link_to "Back to video per users", video_per_users_path
 - #= button_to "Destroy this video per user", @video_per_user, method: :delete
