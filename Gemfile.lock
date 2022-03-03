@@ -215,12 +215,6 @@ GEM
     stimulus-rails (1.0.4)
       railties (>= 6.0.0)
     strscan (3.0.1)
-    tailwindcss-rails (2.0.7)
-      railties (>= 6.0.0)
-    tailwindcss-rails (2.0.7-x86_64-darwin)
-      railties (>= 6.0.0)
-    tailwindcss-rails (2.0.7-x86_64-linux)
-      railties (>= 6.0.0)
     temple (0.8.2)
     thor (1.2.1)
     tilt (2.0.10)
@@ -230,8 +224,6 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-    tzinfo-data (1.2021.5)
-      tzinfo (>= 1.0.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -274,7 +266,6 @@ DEPENDENCIES
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
-  tailwindcss-rails (~> 2.0)
   turbo-rails (~> 0.8)
   tzinfo-data
   web-console
