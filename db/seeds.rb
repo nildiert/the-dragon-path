@@ -220,7 +220,6 @@ user = User.create!(email: "niljordan23@gmail.com", password: "20152005814", pas
 profile = Profile.create!(first_name: "Nildiert", last_name: "Jimenez Jaramillo", phone_number: "3192164645", user: user)
 
 Course.create!(user: user, base_course: setup_course)
-Course.create!(user: user, base_course: first_web_page)
 Course.create!(user: user, base_course: git_course)
 Course.create!(user: user, base_course: html_course)
 Course.create!(user: user, base_course: css_course)
