@@ -309,3 +309,8 @@ profile = Profile.create!(first_name: "Nildiert", last_name: "Jimenez Jaramillo"
 
 
 
+user = User.create!(email: "nedzib.sastoque@gmail.com", password: "123456", password_confirmation: "123456")
+
+profile = Profile.create!(first_name: "Ned", last_name: "Sastoque", phone_number: "3193336666", user: user)
+
+
