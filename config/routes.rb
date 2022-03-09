@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :base_courses
   root "home#index"
   devise_for :users
+  post ':controller(/:action(/:id(.:format)))'
+  get ':controller(/:action(/:id(.:format)))'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
