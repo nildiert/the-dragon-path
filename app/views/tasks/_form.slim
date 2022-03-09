@@ -1,15 +1,15 @@
-
-h5 = link_to task.base_task.title.capitalize, "#{task.base_task.task_url}", :target => "_blank"
-
-= form_with(model: task) do |form|
-    .row
-      .col-5
-        .form-group
-          = form.text_field :link_github, placeholder: "Link GitHub", class: "form-control mb-2 mr-sm-2"
-      .col-5
-        .form-group
-          = form.text_field :url, placeholder: "URL", class: "form-control mb-2 mr-sm-2"
-      .col-5
-        = form.submit "Enviar tarea", class: "btn btn-primary"
+li.list-group-item.mb-2.border.rounded[style = "align-items:center" ]
+  h5 = link_to "#{task.base_task.task_url}", :target => "_blank", class: "text-decoration-none text-primary"
+    i.fas.fa-tasks
+    =" "+task.base_task.title.capitalize
+  .actions.d-flex.justify-content-center.w-100
+    = form_with(model: task) do |form|
+      .row.w-100[style = "align-items:center" ]
+        .col-md
+          = form.text_field :link_github, placeholder: "Link GitHub", class: "field form-control rounded border my-1"
+        .col-md
+          = form.text_field :url, placeholder: "URL", class: "field form-control rounded border my-1"
+        .col-md
+          = form.submit "Enviar tarea", class: "btn btn-outline-primary task-button"
 
 
