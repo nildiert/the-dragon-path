@@ -34,9 +34,35 @@ html body{
     .width-login {
         width: 80%;
     }
+    .task-button{
+        width: 100%;
+    }
+    .playlist-small{
+        display: inherit;
+    }
+    .playlist{
+        display: none;
+    }
+}
+
+@media (min-width: 751px) {
+    .playlist-small{
+        display: none;
+    }
+    .playlist{
+        display: inherit;
+    }
 }
 
 .playlist{
     height: 85vh;
     overflow: scroll;
+}
+
+.card-zoom {
+    transition: transform .2s; /* Animation */
+}
+
+.card-zoom:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }

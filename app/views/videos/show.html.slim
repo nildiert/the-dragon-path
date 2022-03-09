@@ -9,20 +9,27 @@
   .col-md
     = render @video
     #accordionExample.accordion.my-5
-      .accordion-item
+      .accordion-item.playlist-small
         h2#headingOne.accordion-header
           button.accordion-button.collapsed aria-controls="collapseOne" aria-expanded="false" data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button"
-            | Recursos
+            | Videos
         #collapseOne.accordion-collapse.collapse aria-labelledby="headingOne" data-bs-parent="#accordionExample"
+          .accordion-body
+            = render 'videos/playlist', { videos: @course.videos, video: @video }
+      .accordion-item
+        h2#headingTwo.accordion-header
+          button.accordion-button.collapsed aria-controls="collapseTwo" aria-expanded="false" data-bs-target="#collapseTwo" data-bs-toggle="collapse" type="button"
+            | Recursos
+        #collapseTwo.accordion-collapse.collapse aria-labelledby="headingOne" data-bs-parent="#accordionExample"
           .accordion-body
             - @course.base_course.resources.each do |resource|
               li.list-group-item
                 = link_to resource.title.capitalize, "#{resource.url}", :target => "_blank", class: "text-primary text-decoration-none"
       .accordion-item
-        h2#headingTwo.accordion-header
-          button.accordion-button.collapsed aria-controls="collapseTwo" aria-expanded="false" data-bs-target="#collapseTwo" data-bs-toggle="collapse" type="button"
+        h2#headingThree.accordion-header
+          button.accordion-button.collapsed aria-controls="collapseThree" aria-expanded="false" data-bs-target="#collapseThree" data-bs-toggle="collapse" type="button"
             | Tareas
-        #collapseTwo.accordion-collapse.collapse aria-labelledby="headingTwo" data-bs-parent="#accordionExample"
+        #collapseThree.accordion-collapse.collapse aria-labelledby="headingTwo" data-bs-parent="#accordionExample"
           .accordion-body
             - @tasks.each do |task|
               = render 'tasks/form', { task: task }

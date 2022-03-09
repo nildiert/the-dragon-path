@@ -1,0 +1,14 @@
+.w-100.d-flex.justify-content-center.user-select-none
+  .border.mt-5.rounded.p-2.width-login.bg-light
+    .w-100.d-flex.flex-column.justify-content-center
+      h4.my-3
+        = link_to "Inicio", new_session_path(resource_name), class: "text-decoration-none text-primary"
+        = "/¿Olvidaste tu Contraseña?"
+      = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+        = render "devise/shared/error_messages", resource: resource
+        .field
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "tu.email@ejemplo.me", class: "field form-control rounded  border lh-lg mb-2"
+        .actions.d-flex.flex-row.justify-content-center
+          = f.submit "Envíame las instrucciones", class: "btn btn-outline-primary lh-sm"
+      .actions.d-flex.flex-row.justify-content-center
+        = link_to "¿No tienes una cuenta?", new_registration_path(resource_name), class: "text-decoration-none text-dark"
