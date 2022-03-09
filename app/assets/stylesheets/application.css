@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+html body{
+    background-color: #f0efeb;
+}
+
+.badge.rounded-pill.bg-primary {
+    transition: background-color .5s;
+}
+
+.badge.rounded-pill.bg-primary:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.width-login{
+    width: 450px;
+}
+
+@media (max-width: 750px) {
+    .width-login {
+        width: 80%;
+    }
+}
+
+.playlist{
+    height: 85vh;
+    overflow: scroll;
+}

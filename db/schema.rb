@@ -101,6 +101,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_02_20_021636) do
     t.integer "user_id", null: false
     t.integer "base_video_id", null: false
     t.integer "course_id", null: false
+    t.integer "order"
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -1,7 +1,7 @@
 ul.mt-1[style="padding-left: 0" ]
   - videos.order(:order).each do |video_to_show|
     - if video_to_show.id == video.id
-      li.list-group-item.text-primary
+      li.list-group-item.text-primary.sticky-top
         i.far.fa-play.mx-1
         = link_to video_to_show.base_video.title, url_for([video_to_show.course, video_to_show]), :class => "text-decoration-none"
     - else
