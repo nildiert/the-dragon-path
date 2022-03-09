@@ -6,28 +6,29 @@
         |Cursos
       = " / " + @course.base_course.title + " / " + @video.base_video.title
 .row
-  .col-12
-    h3
-      |  Recursos  xd
-    ul
-
-      - @course.base_course.resources.each do |resource|
-        li
-          = link_to resource.title.capitalize, "#{resource.url}", :target => "_blank"
-
-.row
-  .col-md-8
+  .col-md
     = render @video
-  .col-md-4.mt-2
+    #accordionExample.accordion.my-5
+      .accordion-item
+        h2#headingOne.accordion-header
+          button.accordion-button.collapsed aria-controls="collapseOne" aria-expanded="false" data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button"
+            | Recursos
+        #collapseOne.accordion-collapse.collapse aria-labelledby="headingOne" data-bs-parent="#accordionExample"
+          .accordion-body
+            - @course.base_course.resources.each do |resource|
+              li.list-group-item
+                = link_to resource.title.capitalize, "#{resource.url}", :target => "_blank", class: "text-primary text-decoration-none"
+      .accordion-item
+        h2#headingTwo.accordion-header
+          button.accordion-button.collapsed aria-controls="collapseTwo" aria-expanded="false" data-bs-target="#collapseTwo" data-bs-toggle="collapse" type="button"
+            | Tareas
+        #collapseTwo.accordion-collapse.collapse aria-labelledby="headingTwo" data-bs-parent="#accordionExample"
+          .accordion-body
+            - @tasks.each do |task|
+              = render 'tasks/form', { task: task }
+  .col-md-4.playlist
     = render 'videos/playlist', { videos: @course.videos, video: @video }
 
-
-  .col-7.mt-5
-    h2
-      |  Tareas:
-
-      - @tasks.each do |task|
-        = render 'tasks/form', {task: task }
 
 - #= link_to "Back to video per users", video_per_users_path
 - #= button_to "Destroy this video per user", @video_per_user, method: :delete
