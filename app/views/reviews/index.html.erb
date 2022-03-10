@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Reviews</h1>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Usuario</th>
+    <th scope="col">Tarea</th>
+    <th scope="col">Curso</th>
+    <th scope="col">Link Github</th>
+    <th scope="col">Url</th>
+    <th scope="col">Estado</th>
+    <th scope="col">Acción</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @reviews.each do |review| %>
+  <tr>
+    <%= render "form", review: review %>
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+    <%#= render review %>
+<!--    <p>-->
+      <%#= link_to "Show this review", review %>
+<!--    </p>-->
+
+<%#= link_to "New review", new_review_path %>
+

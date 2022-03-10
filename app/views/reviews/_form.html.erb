@@ -1,0 +1,28 @@
+<%= form_with(model: review) do |form| %>
+
+  <th scope="row"><%= review.task.user.email %></th>
+  <td>
+    <%= review.task.base_task.title.capitalize %>
+  </td>
+  <td>
+    <%= review.task.base_task.base_course.title %>
+  </td>
+  <td>
+    <a href="<%= review.task.link_github %>" target="_blank">
+      <%= review.task.link_github %>
+    </a>
+  </td>
+  <td>
+    <a href="<%= review.task.url %>" target="_blank" >
+      <%= review.task.url %>
+    </a>
+  </td>
+  <td>
+    <div class="form-group">
+      <%= form.select( :status, Review.statuses.keys, {} , class: "form-control") %>
+    </div>
+  </td>
+  <td>
+    <%= form.submit class: "btn btn-primary" %>
+  </td>
+<% end %>
