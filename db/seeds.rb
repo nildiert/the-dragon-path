@@ -68,6 +68,13 @@ Resource.create(
 # =======================
 
 
+# =======================
+html_course = BaseCourse.create(
+  title: 'Curso HTML',
+  description: '',
+  order: 4
+)
+
 git_course = BaseCourse.create(
   title: 'Curso Git',
   description: '',
@@ -89,12 +96,7 @@ Resource.create(
 BaseTask.create(title: "Primera pagina web desplegada", description: "Usando la herramienta GitHub Pages sube la primera pagina que creaste, luego coloca el link del repositorio y la url de tu pagina", base_course: html_course, task_url: "https://platzi.com/blog/github-pages/?utm_source=google&utm_medium=cpc&utm_campaign=12915366154&utm_adgroup=&utm_content=&gclid=CjwKCAiAyPyQBhB6EiwAFUuakkUM01wdY-v7QEyNVIQHB0atL4sy_TEHSz8W-pSDrRjvE3y8PBphThoC8tkQAvD_BwE&gclsrc=aw.ds" )
 
 
-# =======================
-html_course = BaseCourse.create(
-  title: 'Curso HTML',
-  description: '',
-  order: 4
-)
+
 
 
 BaseVideo.create([
