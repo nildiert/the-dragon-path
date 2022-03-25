@@ -98,9 +98,38 @@ html_course = BaseCourse.create(
 
 
 BaseVideo.create([
-                   { title: "Curso de HTML5 desde CERO (Completo)", url: "https://www.youtube.com/watch?v=kN1XP-Bef7w&t=3391s", base_course: html_course, order: 1 },
-                   { title: "Curso HTML para Principiantes", url: "https://www.youtube.com/watch?v=rbuYtrNUxg4", base_course: html_course, order: 2 },
-                   { title: "CURSO DE HTML AVANZADO 2020 | html en un solo vídeo", url: "https://www.youtube.com/watch?v=a4w7TCWV-dU&t=2242s", base_course: html_course, order: 3 }]
+  {title: 'Curso de HTML5 desde CERO (Completo)', url: 'https://www.youtube.com/watch?v=kN1XP-Bef7w&t=3391s', base_course: html_course, order: 1},
+  {title: 'Curso HTML para Principiantes', url: 'https://www.youtube.com/watch?v=rbuYtrNUxg4', base_course: html_course, order: 2},
+  {title: 'CURSO DE HTML AVANZADO 2020 | html en un solo vídeo', url: 'https://www.youtube.com/watch?v=a4w7TCWV-dU&t=2242s', base_course: html_course, order: 3},
+  {title: 'HTML y CSS curso práctico 💪 Desde cero [Tutorial Español]', url: 'https://www.youtube.com/watch?v=rr2H086z16s&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm', base_course: html_course, order: 4},
+  {title: 'HTML5 y Visual Studio Code - Curso Desarrollo Web 💪', url: 'https://www.youtube.com/watch?v=ni3LEc3kvas&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=2', base_course: html_course, order: 5},
+  {title: '#3 CSS Introducción para principiantes - Curso 2018 desde cero', url: 'https://www.youtube.com/watch?v=PIKPglimtYk&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=3', base_course: html_course, order: 6},
+  {title: '#4 Fundamentos de HTML 2018 - Encabezados o títulos - Curso HTML5 y CSS3', url: 'https://www.youtube.com/watch?v=QrJyvzjjDT8&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=4', base_course: html_course, order: 7},
+  {title: '#5 Fundamentos de HTML 2018 - Párrafos y formatos - Curso HTML5 y CSS3', url: 'https://www.youtube.com/watch?v=rQXF-_UwmGo&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=5', base_course: html_course, order: 8},
+  {title: '#6 Fundamentos de HTML 2018 - Atributos - Curso HTML5 y CSS3', url: 'https://www.youtube.com/watch?v=z5JkDNG8gtE&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=6', base_course: html_course, order: 9},
+  {title: 'Comentarios en HTML y listas 💪#7 Curso HTML5 y CSS3 2018', url: 'https://www.youtube.com/watch?v=EVAfRe6q-LY&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=7', base_course: html_course, order: 10},
+  {title: '#8 Semántica o estructura HTML5 - Curso 2018', url: 'https://www.youtube.com/watch?v=zpRlWZrLztc&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=8', base_course: html_course, order: 11},
+  {title: '#9 CSS desde cero principiantes - Selector, propiedades y valores', url: 'https://www.youtube.com/watch?v=RErT4Yrx9zw&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=9', base_course: html_course, order: 12},
+  {title: '#10 CSS desde cero principiantes - Aplicar estilos', url: 'https://www.youtube.com/watch?v=X0RNkXYS6Pg&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=10', base_course: html_course, order: 13},
+  {title: '#11 CSS desde cero principiantes - Colores', url: 'https://www.youtube.com/watch?v=ot965xP63eU&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=11', base_course: html_course, order: 14},
+  {title: '#12 CSS desde cero principiantes - Margenes y Padding', url: 'https://www.youtube.com/watch?v=oqegxG13FzA&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=12', base_course: html_course, order: 15},
+  {title: '#13 Flexbox CSS3 Español 2018', url: 'https://www.youtube.com/watch?v=-N-ch_rmZg0&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=13', base_course: html_course, order: 16},
+  {title: '#15 Fundamentos de CSS 2018 - Elementos de bloque y de línea - Curso HTML5 y CSS3', url: 'https://www.youtube.com/watch?v=X0qe4XJI5eY&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=14', base_course: html_course, order: 17},
+  {title: 'Menú HTML y CSS - #16 Barra de navegación Responsive', url: 'https://www.youtube.com/watch?v=GVjgi3Fg4Xg&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=15', base_course: html_course, order: 18},
+  {title: '#14 Fundamentos de CSS 2018 - Pseudoclases Hover y Active - Curso HTML5 y CSS3', url: 'https://www.youtube.com/watch?v=WAAA0fBZy4Y&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=16', base_course: html_course, order: 19},
+  {title: 'Menú HTML y CSS 💪#17 Flexbox (NAVBAR 2018)', url: 'https://www.youtube.com/watch?v=wUn-Z48wBPk&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=17', base_course: html_course, order: 20},
+  {title: 'Menú HTML y CSS - #18 Adaptabilidad', url: 'https://www.youtube.com/watch?v=I9kAo_2dUNo&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=18', base_course: html_course, order: 21},
+  {title: 'Menú HTML y CSS - #19 Agregar botón', url: 'https://www.youtube.com/watch?v=cALJnjFUJbg&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=19', base_course: html_course, order: 22},
+  {title: 'Menú HTML y CSS - #20 Javascript', url: 'https://www.youtube.com/watch?v=vEvdIzm-U-o&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=20', base_course: html_course, order: 23},
+  {title: '#21 Crear tabla de precios con HTML y CSS - Introducción', url: 'https://www.youtube.com/watch?v=VKfVrgrS0gk&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=21', base_course: html_course, order: 24},
+  {title: '#22 Crear tabla de precios con HTML y CSS - Centrando contenido', url: 'https://www.youtube.com/watch?v=Z0aspFpdOdA&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=22', base_course: html_course, order: 25},
+  {title: '#23 CSS letras bonitas 😜 - Google Fonts', url: 'https://www.youtube.com/watch?v=4DbzYOmr3vQ&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=23', base_course: html_course, order: 26},
+  {title: '#24 Crear tabla de precios con HTML y CSS - Columnas con Flexbox', url: 'https://www.youtube.com/watch?v=AqQRnrH43ao&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=24', base_course: html_course, order: 27},
+  {title: '#25 Crear tabla de precios con HTML y CSS - Estilos para las columnas', url: 'https://www.youtube.com/watch?v=Td4R9uva8rQ&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=25', base_course: html_course, order: 28},
+  {title: '#26 Crear tabla de precios con HTML y CSS - Sombras', url: 'https://www.youtube.com/watch?v=BgGA_raDZP0&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=26', base_course: html_course, order: 29},
+  {title: '#27 Crear tabla de precios con HTML y CSS - Botón', url: 'https://www.youtube.com/watch?v=fZJsLmLD2tQ&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=27', base_course: html_course, order: 30},
+  {title: '#28 Crear tabla de precios con HTML y CSS - Tabla responsive', url: 'https://www.youtube.com/watch?v=NzU0NUfOFz4&list=PLPl81lqbj-4LKo66cEts5yC_AjOvqKptm&index=28', base_course: html_course, order: 31}
+                  ]
 )
 
 Resource.create(
@@ -209,7 +238,9 @@ Resource.create([
   { title: 'CSS grid: diseño con función inteligente', url: 'https://www.ionos.es/digitalguide/paginas-web/creacion-de-paginas-web/css-grid-layout/', base_course: grid_course },
   { title: 'CSS Grid Layout', url: 'https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout', base_course: grid_course}])
 
-BaseTask.create( title: "Blog", description: "", base_course: grid_course, task_url: "https://getbootstrap.com/docs/4.0/examples/blog/")
+BaseTask.create( [
+  {title: "Blog", description: "", base_course: grid_course, task_url: "https://getbootstrap.com/docs/4.0/examples/blog/"}
+  ])
 
 
 # =======================
